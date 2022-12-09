@@ -1,6 +1,6 @@
 # ChatGPT for Google
 
-注：改为 国内的，非盈利 API
+注：改为 国内的，非盈利 API, [源库](https://github.com/wong2/chat-gpt-google-extension)
 
 
 A browser extension to display ChatGPT response alongside Search Engine results, supports Chrome/Edge/Firefox
