@@ -1,0 +1,38 @@
+{
+  "name": "ChatGPT for Search",
+  "description": "在搜索引擎旁边，给出 ChatGPT 的回答",
+  "version": "1.2.1",
+  "manifest_version": 3,
+  "icons": {
+    "16": "logo.png",
+    "32": "logo.png",
+    "48": "logo.png",
+    "128": "logo.png"
+  },
+  "host_permissions": ["https://*.bygpt.com/", "https://*.chatapi.art"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://*/*"],
+      "include_globs": [
+        "https://*.google.*/*",
+        "https://kagi.*/*",
+        "https://*.bing.*/*",
+        "https://*.yahoo.*/*",
+        "https://*.naver.*/*",
+        "https://*.brave.*/*",
+        "https://*.ecosia.org/*",
+        "https://searx.be/*",
+        "https://www.searx.be/*",
+        "https://yandex.*/*",
+        "https://duckduckgo.*",
+        "https://*.startpage.*/*",
+        "https://*.baidu.*"
+      ],
+      "js": ["content-script.js"],
+      "css": ["content-script.css"]
+    }
+  ]
+}
